@@ -20,6 +20,6 @@ size_t Date::GetYear() const
 
 std::ostream& operator<<(std::ostream& os, const Date& d)
 {
-	os << d.m_day << "." << d.m_month << "." << d.m_year;
+	os << ((d.m_day < 10)?"0":"") << d.m_day << "." << ((d.m_month < 10) ? "0" : "") << d.m_month << "." << d.m_year;
 	return os;
 }

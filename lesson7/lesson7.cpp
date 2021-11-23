@@ -53,6 +53,17 @@ void Zadanie2()
 
      ----------------------------------------------------*/
 
+    SmartPtr<Date> date1 (new Date(22, 11, 2021));
+    SmartPtr<Date> date2 (new Date(28, 02, 1989));
+
+    std::cout << "date1 " << *date1 << "\n" << "date2 " << *date2 << "\n";
+    std::cout << "Большая дата " << *(compare(date1, date2)) << "\n";
+
+    std::cout << "Применим функцию exchange " << "\n";
+    exchange(date1, date2);
+
+    std::cout << "date1 " << *date1 << "\n" << "date2 " << *date2 << "\n";
+
 };
 
 void Zadanie3()
